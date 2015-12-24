@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MessagingApp</string>
+    <string name="error_network">لا يوجد اتصال بالأنترنت</string>
+    <string name="error">حدث خطأ، حاول مجددا</string>
+    <string name="error_login">أسم مستخدم خطأ أو كلمة سر خاطئة</string>
+    <string name="error_signup">أسم المستخدم موجود مسبقا</string>
+    <string name="error_query_users">فشل تحميل المستخدمين، حاول مجددا</string>
+    <string name="error_push">فشل ارسال الرسالة</string>
+    <string name="error_logout">حدث خطأ أثناء تسجيل الخروج، حاول مجددا</string>
+    <string name="b_menu_logout">تسجيل الخروج</string>
+    <string name="b_login">دخول</string>
+    <string name="b_signup">تسجيل</string>
+    <string name="username">أسم المستخدم</string>
+    <string name="password">كلمة السر</string>
+    <string name="wait">رجاء الأنتظار...</string>
+    <string name="short_name">أسم المستخدم يجب أن يكون أطول من 6 حروف</string>
+    <string name="short_pass">كلمة السر يحب أن تكون أطول من 6 حروف</string>
+    <string name="message_here">أكتب الرسالة هنا...</string>
+    <string name="send_to">إرسال إلى:</string>
+    <string name="menu_search">بحث</string>
+    <string name="notify">تنبيه</string>
+    <string name="b_context_remove">حذف</string>
+    <string name="done">تم</string>
+    <string name="b_menu_settings">إعدادات</string>
+    <string name="noti_msg_from">رسالة من</string>
+
+    <plurals name="messages">
+        <item quantity="one">رسالة</item>
+        <item quantity="two">رسالتان جديدتان</item>
+        <item quantity="few">%d رسائل جديدة</item>
+        <item quantity="many">%d رسائل جديدة</item>
+        <item quantity="zero">لا شئ</item>
+        <item quantity="other">%d رسائل جديدة</item>
+    </plurals>
+    <string name="noti_from">تنبيه من</string>
+    <string name="notified">يطلب الأنتباه الى محادثته</string>
+</resources>

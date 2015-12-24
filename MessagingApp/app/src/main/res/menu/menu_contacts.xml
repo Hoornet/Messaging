@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bSettings"
+        android:menuCategory="system"
+        android:orderInCategory="1"
+        android:title="@string/b_menu_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/bLogout"
+        android:menuCategory="system"
+        android:orderInCategory="2"
+        android:title="@string/b_menu_logout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/bSearch"
+        android:icon="@drawable/search"
+        android:menuCategory="secondary"
+        android:orderInCategory="1"
+        android:title="@string/menu_search"
+        app:showAsAction="ifRoom" />
+</menu>
