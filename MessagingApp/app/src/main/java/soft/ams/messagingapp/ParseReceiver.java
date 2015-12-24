@@ -34,7 +34,7 @@ public class ParseReceiver extends ParsePushBroadcastReceiver {
 
             // show notification to the current user from this username
             UserNotifier.showNotification(context, new Intent(), ticker, username, message,
-                    (int)System.currentTimeMillis(), true);
+                    (int) System.currentTimeMillis(), true);
         }
         // check message activity state and chattingTo username
         else if (StateKeeper.isMessagesActivityRunning() && StateKeeper.getChattingTo().equals(username))
@@ -76,6 +76,10 @@ public class ParseReceiver extends ParsePushBroadcastReceiver {
             keeper.insert(message);
 
             userId = NotificationIdKeeper.getId(username);
+
+            // add the username to the recent list
+            RecentContacts recent = RecentContacts.getInstance(context);
+            recent.add(username);
 
             return keeper.count();
         }

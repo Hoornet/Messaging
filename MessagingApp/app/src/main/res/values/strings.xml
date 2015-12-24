@@ -32,4 +32,5 @@
     </plurals>
     <string name="noti_from">Notification from</string>
     <string name="notified">Requests attention to his conversation</string>
+    <string name="wrong_username">Username can contain only a-z and A-Z</string>
 </resources>

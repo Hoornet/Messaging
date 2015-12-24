@@ -21,7 +21,7 @@ public class MessagesKeeper extends SQLiteOpenHelper {
 
     public MessagesKeeper(Context context, final String tableName) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        this.tableName = tableName;
+        this.tableName = tableName.toLowerCase();
 
         onCreate(getWritableDatabase());
     }

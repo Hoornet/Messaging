@@ -35,4 +35,5 @@
     </plurals>
     <string name="noti_from">تنبيه من</string>
     <string name="notified">يطلب الأنتباه الى محادثته</string>
+    <string name="wrong_username">الأسم يمكن أن يحتوي فقط على a-z و A-Z</string>
 </resources>

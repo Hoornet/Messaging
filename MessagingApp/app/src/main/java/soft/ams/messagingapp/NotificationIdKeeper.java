@@ -3,7 +3,6 @@ package soft.ams.messagingapp;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
 public class NotificationIdKeeper {
     /**
@@ -42,14 +41,10 @@ public class NotificationIdKeeper {
      * @return the inserted user id
      */
     private static int insertUsername(String username) {
-        // generate random number
-        Random rand = new Random();
-        int randInt = rand.nextInt() + 1;
-        // while the list has the number, keep generating
-        while (ID_LIST.contains(randInt))
-            randInt = rand.nextInt();
+        // use current time
+        int randInt = (int) System.currentTimeMillis();
         // add the id and username to the list
-        ID_LIST.add(randInt);
+        ID_LIST.add((int)System.currentTimeMillis());
         USERNAME_LIST.add(username);
 
         return randInt;

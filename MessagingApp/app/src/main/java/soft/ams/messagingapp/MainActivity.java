@@ -206,6 +206,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (password.length() < 6) {
             tvError.setText(getString(R.string.short_pass));
             returned = false;
+        } else if (!username.matches("[a-zA-Z]+")) {
+            // check if the usernamme is valid or not
+            this.username.setText("");
+            this.username.requestFocus();
+            tvError.setText(getString(R.string.wrong_username));
+            returned = false;
         }
         // clear entered password and error textview
         if (returned)

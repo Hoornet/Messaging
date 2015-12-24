@@ -1,5 +1,6 @@
 package soft.ams.messagingapp;
 
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -69,12 +70,19 @@ public class ContactsFragment extends Fragment {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String username = recents.get(position);
                 // update the selected index position
                 contacts.add(recents.get(position));
+
                 // start the messages activity
                 Intent intent = new Intent(CONTEXT, MessagesActivity.class);
-                intent.putExtra(MessagesActivity.KEY_MESSAGING_TO, recents.get(position));
+                intent.putExtra(MessagesActivity.KEY_MESSAGING_TO, username);
                 startActivity(intent);
+
+                // cancel the notification
+                NotificationManager nMgr = (NotificationManager)
+                        CONTEXT.getSystemService(Context.NOTIFICATION_SERVICE);
+                nMgr.cancel(NotificationIdKeeper.getId(username));
             }
         });
         // register the lv to a context menu
